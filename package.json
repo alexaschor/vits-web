@@ -1,8 +1,8 @@
 {
-  "name": "@diffusionstudio/vits-web",
+  "name": "@alexaschor/vits-web",
   "private": false,
   "version": "1.0.3",
-  "description": "Web api for using VITS based models in the browser!",
+  "description": "[FORK] Web api for using VITS based models in the browser!",
   "type": "module",
   "files": [
     "dist",
@@ -10,7 +10,7 @@
   ],
   "module": "./dist/vits-web.js",
   "types": "./dist/index.d.ts",
-  "author": "mail@konstantinpaulus.de",
+  "author": "alexaschor@gmail.com",
   "exports": {
     ".": {
       "import": "./dist/vits-web.js",
@@ -22,12 +22,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:diffusionstudio/vits-web.git"
+    "url": "git@github.com:alexaschor/vits-web.git"
   },
   "bugs": {
-    "url": "https://github.com/diffusionstudio/vits-web/issues"
+    "url": "https://github.com/alexaschor/vits-web/issues"
   },
-  "homepage": "https://huggingface.co/spaces/diffusionstudio/vits-web",
   "license": "MIT",
   "keywords": [
     "vits",
@@ -46,7 +45,8 @@
     "build": "rm -r -f ./dist && tsc && vite build",
     "preview": "vite preview",
     "format": "npx @biomejs/biome format --write ./src",
-    "test": "npx playwright test --project=chromium"
+    "test": "npx playwright test --project=chromium",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
